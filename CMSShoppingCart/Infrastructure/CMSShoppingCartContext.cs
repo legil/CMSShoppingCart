@@ -8,7 +8,7 @@ namespace CMSShoppingCart.Infrastructure
 {
     public class CMSShoppingCartContext : DbContext
     {
-        public CMSShoppingCartContext(DbContext<CMSShoppingCartContext> options) : base(options)
+        public CMSShoppingCartContext(DbContextOptions<CMSShoppingCartContext> options) : base(options)
         {
 
         }

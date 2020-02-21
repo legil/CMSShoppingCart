@@ -1,6 +1,6 @@
 using System;
 
-namespace CMSShoppingCart.Models
+namespace DependencyInjection.Models
 {
     public class ErrorViewModel
     {

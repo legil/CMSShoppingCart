@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29721.120
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSShoppingCart", "CMSShoppingCart\CMSShoppingCart.csproj", "{369FEC68-F374-46B7-B874-03F1DC8215C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "DependencyInjection\DependencyInjection.csproj", "{58C9A14D-7E11-4205-9A38-90F93E4D48FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{369FEC68-F374-46B7-B874-03F1DC8215C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{369FEC68-F374-46B7-B874-03F1DC8215C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{369FEC68-F374-46B7-B874-03F1DC8215C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58C9A14D-7E11-4205-9A38-90F93E4D48FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58C9A14D-7E11-4205-9A38-90F93E4D48FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58C9A14D-7E11-4205-9A38-90F93E4D48FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58C9A14D-7E11-4205-9A38-90F93E4D48FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

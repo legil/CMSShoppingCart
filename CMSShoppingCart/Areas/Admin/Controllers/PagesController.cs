@@ -51,6 +51,7 @@ namespace CMSShoppingCart.Areas.Admin.Controllers
 
         //POST /admin/pages/create
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Page page)
         {
             if (ModelState.IsValid)

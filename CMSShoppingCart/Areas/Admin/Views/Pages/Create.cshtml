@@ -34,4 +34,8 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} <!--jquery validation scripts render within _Layout-->
+
+    <script>
+            CKEDITOR.replace("Content");
+    </script>
 }

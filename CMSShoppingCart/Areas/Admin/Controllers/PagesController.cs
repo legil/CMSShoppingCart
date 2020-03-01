@@ -20,7 +20,7 @@ namespace CMSShoppingCart.Areas.Admin.Controllers
         }
 
         //GET /admin/pages
-       public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
             IQueryable<Page> pages = from p in context.Pages orderby p.Sorting select p;
             List<Page> pagesList = await pages.ToListAsync();
@@ -33,7 +33,7 @@ namespace CMSShoppingCart.Areas.Admin.Controllers
         public async Task<IActionResult> Details(int id)
         {
             Page page = await context.Pages.FirstOrDefaultAsync(x => x.Id == id);
-            if( page == null)
+            if (page == null)
             {
                 return NotFound();
             }
@@ -98,7 +98,7 @@ namespace CMSShoppingCart.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+
                 page.Slug = page.Id == 1 ? "home" : page.Title.ToLower().Replace(" ", "-");
 
                 //check if slug exists but for a different page
@@ -118,6 +118,26 @@ namespace CMSShoppingCart.Areas.Admin.Controllers
             }
 
             return View(page);
+
+        }
+
+        //GET /admin/pages/delete/5
+        public async Task<IActionResult> Delete(int id)
+        {
+            Page page = await context.Pages.FindAsync(id);
+            if (page == null)
+            {
+                TempData["Error"] = "The page does not exist!";
+            }
+            else
+            {
+                context.Pages.Remove(page);
+                await context.SaveChangesAsync();
+
+                TempData["Success"] = "The page has been deleted!";
+            }
+
+            return RedirectToAction("Index");
 
         }
     }
